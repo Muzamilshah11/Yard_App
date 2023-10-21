@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            padding: 50px 100px;
+        }
+        form{
+            padding: 10px 10px;
+            text-align: center;
+            background-color:gold;
+            border-radius: 30px;
+            font-size: 30px;
+           
+        }
+        .inp{
+
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 30px;
+
+        }
+        button{
+
+            background-color: black;
+            font-size: large;
+            color: rgb(255, 255, 255);
+            font-family:system-ui, -apple-system;
+            border-radius: 30px;
+            padding:8px 10px;
+
+        }
+        #yardpass{
+
+            font-family:inherit;
+            font-weight: bold;
+            align-items: center;
+            color: rgb(48, 220, 29);
+            font-size: 50px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    
+    
+       
+
+    <form  onsubmit="dosum(event)">
+        <h1 align="center" > Yard Converter</h1>
+                Enter Yard: &nbsp;&nbsp;<input type="number" class="inp" id="n1" placeholder="Allow only Number" class="inp"/ ><br><br>
+                <button type="submit">Convert Yard</button>
+    
+            </form>
+            <script>
+                function dosum(event){
+                console.log("Yard Pass");
+                event.preventDefault();
+    
+                let Yard= document.querySelector("#n1").value;
+                let num= 9;
+                let resul= Number(Yard) *Number(num);
+                console.log(num);
+                let messag = "The "+ Yard+" Yard Convert into total "+ resul+" Squre Feets!";
+                document.querySelector("#yardpass").innerHTML=messag;
+                }
+                </script>
+                <hr width="500em" color="green">
+                <h3 align="center" id="yardpass">Check the Result</h3>
+                <hr width="500em" color="pink">   
+    
+    
+    
+
+
+</body>
+</html>
